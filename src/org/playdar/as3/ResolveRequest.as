@@ -15,5 +15,9 @@ package org.playdar.as3
 			this.track_title = track_title;
 			this.request_id = GUID.create(); // Each resolve request gets a guid
 		}
+		
+		public function toString():String{
+			return "ResolveRequest(artist_name='"+this.artist_name+"', track_title='"+this.track_title+"', request_id='"+this.request_id+"')";
+		}
 	}
 }

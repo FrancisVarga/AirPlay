@@ -29,7 +29,7 @@ package org.playdar.as3
 		
 		
 		public function toString():String{
-			return "ResolveRequest(artist='"+this.artist+"', track='"+this.track+"', url='"+this.url+"')"
+			return "ResolveResult(artist='"+this.artist+"', track='"+this.track+"', url='"+this.url+"')"
 		}
 	}
 }

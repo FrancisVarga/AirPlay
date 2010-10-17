@@ -13,5 +13,9 @@ package org.playdar.as3
 			this.request = request;	
 			this.request_id = request.request_id;
 		}
+		
+		public function toString():String{
+			return "ResolveResponse(request="+this.request.toString()+", request_id='"+this.request_id+"', results=["+this.results.toString()+"])"
+		}
 	}
 }
