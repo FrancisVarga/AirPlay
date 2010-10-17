@@ -33,6 +33,10 @@ package org.playdar.as3
 			PlaydarServer.instance = this;
 		}
 		
+		
+		/**
+		 * @todo (lucas) All this logging crap should be moved to a decoupled class in Breezy.
+		 */
 		public function addPlugin(plugin:Object):void{
 			this.plugins.push(plugin);
 		}
