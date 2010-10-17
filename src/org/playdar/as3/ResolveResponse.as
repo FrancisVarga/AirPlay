@@ -5,6 +5,7 @@ package org.playdar.as3
 	{
 		public var solved:Boolean = false;
 		public var request_id:String = null;
+		// @todo (lucas) make Vector<ResolveResult>
 		public var results:Array = new Array();
 		public var request:ResolveRequest;
 		public function ResolveResponse(request:ResolveRequest)

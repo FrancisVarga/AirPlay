@@ -45,6 +45,9 @@ package org.playdar.as3
 			this.logHandlers.push(handler);
 		}
 		
+		/**
+		 * @todo (lucas) Support levels?  Maybe not.  Everybody usually only uses info for everything.
+		 */
 		private function log(what:Object):void{
 			logHandlers.forEach(function(h){
 				h.apply(this, [what]);
@@ -72,10 +75,17 @@ package org.playdar.as3
 			
 		}
 		
+		/**
+		 * @todo (lucas) rename.  This is unclear.
+		 */
 		public function getResults(request_id:String):Object{
 			return this.results[request_id].results;
 		}
 		
+		/**
+		 * @todo (lucas) Probably way better if this is accomplished by listening for events on 
+		 * ResolveRequests (see timeout long requests).
+		 */
 		public function addResults(results:Array, request_id:String):void{
 			var server:PlaydarServer = this;
 			results.forEach(function(result){
@@ -86,6 +96,7 @@ package org.playdar.as3
 		
 		/**
 		 * Starts a socket server to listen for incoming requests.
+		 * @note (lucas) Still pretty happy with this.
 		 */
 		public function start():void{
 			var handlers:Array = [
@@ -102,13 +113,14 @@ package org.playdar.as3
 			this.http_server.stop();
 		}
 		
+		
 		public function restart():void{
 			this.stop();
 			this.start();
 		}
 		
 		public function stream(result_id:String):void{
-			
+			// @todo (lucas) Need to add/clean up map result_id -> results.
 		}
 	}
 }

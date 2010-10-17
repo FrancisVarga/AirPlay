@@ -1,3 +1,6 @@
+/**
+ * @todo (lucas) Rename this... Its totally unclear what it is (MainController)
+ */
 package org.playdar.as3
 {
 	import breezy.BaseHandler;

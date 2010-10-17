@@ -20,6 +20,8 @@ package org.playdar.as3.plugin
 		
 		/**
 		 * @todo (lucas) Add bootstrapped to IPlaydarPlugin for first run (ie download an entire index)
+		 * @todo (lucas) Support scoring?
+		 * @todo (lucas) Support giving up on external requests that take too long.
 		 */
 		
 		override public function resolve(request:ResolveRequest):void{
