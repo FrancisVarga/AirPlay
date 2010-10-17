@@ -119,6 +119,11 @@ package org.playdar.as3
 			this.start();
 		}
 		
+		/**
+		 * @todo (lucas) Do we even need to do this??
+		 * @todo (lucas) Make all playback go through here.  This app plays Sounds so no one else has to worry about it.  
+		 * Plugins can also be responsible for handling their own results (ie delegate control to a plugin's RTMP container).
+		 */
 		public function stream(result_id:String):void{
 			// @todo (lucas) Need to add/clean up map result_id -> results.
 		}
